@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BEEEF991-C5C8-4A42-A2B2-7B5E6D08CFAA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>_LC_Classis_dotnetf</RootNamespace>
+    <AssemblyName>_LC_Classis_dotnetf</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attributes\lcIgnoreAttribute.cs" />
+    <Compile Include="Attributes\ldDebugFeatureAttribute.cs" />
+    <Compile Include="Common\GraphicMetaHelper.cs" />
+    <Compile Include="Common\lcCanvas.cs" />
+    <Compile Include="Common\lcgenericDoc.cs" />
+    <Compile Include="Common\lcLayer.cs" />
+    <Compile Include="Meta\PCB\SP\lcPlaneZone.cs" />
+    <Compile Include="Meta\PCB\SIMPLE\lcArc.cs" />
+    <Compile Include="Meta\PCB\SIMPLE\lcCircle.cs" />
+    <Compile Include="Meta\PCB\COMPLEX\lcCopperarea.cs" />
+    <Compile Include="Meta\PCB\COMPLEX\lcDimension.cs" />
+    <Compile Include="Meta\PCB\COMPLEX\lcHole.cs" />
+    <Compile Include="Meta\lcMeta.cs" />
+    <Compile Include="Common\lcSeparator.cs" />
+    <Compile Include="Lcproj.cs" />
+    <Compile Include="Meta\PCB\COMPLEX\lcPad.cs" />
+    <Compile Include="Meta\PCB\COMPLEX\lcProtractor.cs" />
+    <Compile Include="Meta\PCB\SIMPLE\lcRect.cs" />
+    <Compile Include="Meta\PCB\SP\lcFootprint.cs" />
+    <Compile Include="Meta\PCB\SP\lcSheet.cs" />
+    <Compile Include="Meta\PCB\COMPLEX\lcSolidregion.cs" />
+    <Compile Include="Meta\PCB\SP\lcSvgNode.cs" />
+    <Compile Include="Meta\PCB\SIMPLE\lcText.cs" />
+    <Compile Include="Meta\PCB\SIMPLE\lcTrack.cs" />
+    <Compile Include="Meta\lcUnknow.cs" />
+    <Compile Include="Meta\PCB\COMPLEX\lcVia.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Exceptions\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
