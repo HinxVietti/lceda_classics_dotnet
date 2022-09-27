@@ -32,5 +32,10 @@ namespace _LC_Classis_dotnetf.Meta
             string sample = "TRACK~1~1~~4055.5 3348 4055.5 3346 4131.5 3270 4096 3270~gge5~0";
             return new lcTrack(sample);
         }
+
+        public override void AddOffset(float x, float y)
+        {
+            this.pointArr = pointArr.pointsAddOffsetXY(x,y);
+        }
     }
 }

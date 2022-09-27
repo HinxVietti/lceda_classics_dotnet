@@ -53,5 +53,12 @@ namespace _LC_Classis_dotnetf.Meta
             string sample = "TEXT~L~4081~3306.5~0.8~0~0~1~~8~TEXT~M 4083.55 3298.44 L 4083.55 3306.07 M 4081 3298.44 L 4086.09 3298.44 M 4088.49 3298.44 L 4088.49 3306.07 M 4088.49 3298.44 L 4093.22 3298.44 M 4088.49 3302.07 L 4091.4 3302.07 M 4088.49 3306.07 L 4093.22 3306.07 M 4095.62 3298.44 L 4100.71 3306.07 M 4100.71 3298.44 L 4095.62 3306.07 M 4105.65 3298.44 L 4105.65 3306.07 M 4103.11 3298.44 L 4108.2 3298.44~~gge13~~0~pinpart";
             return new lcText(sample);
         }
+
+        public override void AddOffset(float x, float y)
+        {
+            this.x = this.x.Add(x);
+            this.y = this.y.Add(y);
+            //pathStr = pathStr.pointsAddOffsetXY_Path(x, y);
+        }
     }
 }

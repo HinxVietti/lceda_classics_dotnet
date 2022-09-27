@@ -57,5 +57,9 @@ namespace _LC_Classis_dotnetf.Meta
             string sample = "COPPERAREA~1~1~GND~M 4055 3023.5 L 4055 3060.5 L 4060 3065.5 L 4108.5 3065.5 L 4115.5 3058.5 L4115.5,3025 L4114,3023.5 Z~1~solid~gge83~spoke~none~~0~~1~1~1~1~yes~0";
             return new lcCopperarea(sample);
         }
+        public override void AddOffset(float x, float y)
+        {
+            this.pathStr = this.pathStr.pointsAddOffsetXY_Path(x,y);
+        }
     }
 }

@@ -38,5 +38,16 @@ namespace _LC_Classis_dotnetf.Meta
             string sample = "CIRCLE~4193.5~3148~45.6426~1~1~gge5~0~~circle_gge8,circle_gge9";
             return new _LC_COM(sample);
         }
+
+        public override void AddOffset(float x, float y)
+        {
+            float xx = float.Parse(this.cx);
+            float yy = float.Parse(this.cy);
+            xx += x;
+            yy += y;
+
+            this.cx = xx.ToString("0.000");
+            this.cy = yy.ToString("0.000");
+        }
     }
 }

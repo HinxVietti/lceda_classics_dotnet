@@ -47,5 +47,11 @@ namespace _LC_Classis_dotnetf.Meta
             return lib;
 
         }
+
+        public override void AddOffset(float x, float y)
+        {
+            this.x = this.x.Add(x);
+            this.y = this.y.Add(y);
+        }
     }
 }

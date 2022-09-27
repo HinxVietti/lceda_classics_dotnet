@@ -33,7 +33,31 @@ namespace _LC_Classis_dotnetf
             this.preference = doc.preference;
             this.DRCRULE = doc.DRCRULE;
             this.netColors = doc.netColors;
+        }
 
+        public lcgenericDoc ToDoc()
+        {
+            return new lcgenericDoc() {
+                head = this.head,
+                canvas = GraphicMetaHelper.ConvertToString(canvas),
+                shape = ConvertShapeToList(),
+                layers = ConvertLayersToList(),
+                objects = new List<string>(objects),
+                BBox = BBox,
+                preference = preference,
+                DRCRULE  = DRCRULE,
+                netColors = netColors
+            };
+        }
+
+        private List<string> ConvertLayersToList()
+        {
+            return this.layers.ConvertAll(layer=>GraphicMetaHelper.ConvertToString(layer));
+        }
+
+        private List<string> ConvertShapeToList()
+        {
+            return this.shape.ConvertAll(sp=>GraphicMetaHelper.ConvertToString(sp));
         }
     }
 

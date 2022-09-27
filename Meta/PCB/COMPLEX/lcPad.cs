@@ -55,5 +55,13 @@ namespace _LC_Classis_dotnetf.Meta
             string sample = "PAD~ELLIPSE~4020~3308.5~6~6~11~~1~1.8~~0~gge5~0~~Y~0~~~4020,3308.5";
             return new lcPad(sample);
         }
+
+        public override void AddOffset(float x, float y)
+        {
+            this.x = this.x.Add(x);
+            this.y = this.y.Add(y);
+            this.holeCenter = this.holeCenter.AddToVector2(x, y);
+            this.pointArr = this.pointArr.pointsAddOffsetXY(x, y);
+        }
     }
 }

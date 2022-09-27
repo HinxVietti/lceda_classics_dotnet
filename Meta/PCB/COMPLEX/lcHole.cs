@@ -28,5 +28,12 @@ namespace _LC_Classis_dotnetf.Meta
             string sample = "HOLE~4041.5~3309~4~gge15~0";
             return new lcHole(sample);
         }
+
+
+        public override void AddOffset(float x, float y)
+        {
+            this.x = this.x.Add(x);
+            this.y = this.y.Add(y);
+        }
     }
 }

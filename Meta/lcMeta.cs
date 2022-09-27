@@ -16,5 +16,7 @@ namespace _LC_Classis_dotnetf.Common
             _paras = args;
             cmdKey = args[0];
         }
+
+        public virtual void AddOffset(float x, float y) { }
     }
 }

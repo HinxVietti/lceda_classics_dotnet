@@ -20,6 +20,7 @@ namespace _LC_Classis_dotnetf.Common
         public string bind_pcb_id;//绑定的pcb封装的id（弃用）
         public string convert_to_pcb;//是否更新到pcb
         public string add_into_bom;//是否加入bom表单
+        public string sid;//是否加入bom表单
 
         public List<lcMeta> lcmetas = new List<lcMeta>();
 
@@ -42,6 +43,23 @@ namespace _LC_Classis_dotnetf.Common
                 this.convert_to_pcb = args[11];
             if (args.Length > 12)
                 this.add_into_bom = args[12];
+            if (args.Length > 13)
+                this.sid = args[13];
+        }
+        public override void AddOffset(float x, float y)
+        {
+            float xx = float.Parse(this.x);
+            float yy = float.Parse(this.y);
+            xx += x;
+            yy += y;
+
+            this.x = xx.ToString("0.000");
+            this.y = yy.ToString("0.000");
+
+            foreach (var meta in lcmetas)
+            {
+                meta.AddOffset(x, y);
+            }
         }
 
 
@@ -63,5 +81,7 @@ namespace _LC_Classis_dotnetf.Common
             return lib;
 
         }
+
+
     }
 }

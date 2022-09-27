@@ -45,6 +45,17 @@
     <Compile Include="Common\lcCanvas.cs" />
     <Compile Include="Common\lcgenericDoc.cs" />
     <Compile Include="Common\lcLayer.cs" />
+    <Compile Include="Internal\InternalcHelper.cs" />
+    <Compile Include="Internal\LitJson\IJsonWrapper.cs" />
+    <Compile Include="Internal\LitJson\JsonData.cs" />
+    <Compile Include="Internal\LitJson\JsonException.cs" />
+    <Compile Include="Internal\LitJson\JsonMapper.cs" />
+    <Compile Include="Internal\LitJson\JsonMockWrapper.cs" />
+    <Compile Include="Internal\LitJson\JsonReader.cs" />
+    <Compile Include="Internal\LitJson\JsonWriter.cs" />
+    <Compile Include="Internal\LitJson\Lexer.cs" />
+    <Compile Include="Internal\LitJson\Netstandard15Polyfill.cs" />
+    <Compile Include="Internal\LitJson\ParserToken.cs" />
     <Compile Include="Meta\PCB\SP\lcPlaneZone.cs" />
     <Compile Include="Meta\PCB\SIMPLE\lcArc.cs" />
     <Compile Include="Meta\PCB\SIMPLE\lcCircle.cs" />

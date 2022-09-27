@@ -39,5 +39,10 @@ namespace _LC_Classis_dotnetf.Meta
             string sample = "SOLIDREGION~1~~M 4012 3300.5 L 4012 3317.5 L 4019.5 3325 L 4034 3325 L 4040 3319 L 4040 3308 L 4031 3299 L4019.5,3299 L4018.5,3298 Z~solid~gge20~~~~0";
             return new lcSolidregion(sample);
         }
+
+        public override void AddOffset(float x, float y)
+        {
+            this.pathStr = this.pathStr.pointsAddOffsetXY_Path(x, y);
+        }
     }
 }

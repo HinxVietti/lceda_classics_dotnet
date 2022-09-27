@@ -44,5 +44,11 @@ namespace _LC_Classis_dotnetf.Meta
         {
             return new lcRect("RECT~4065.5~3293.25~63~45.5~1~gge6~0~0~~~~");
         }
+
+        public override void AddOffset(float x, float y)
+        {
+            this.x = this.x.Add(x);
+            this.y = this.y.Add(y);
+        }
     }
 }
