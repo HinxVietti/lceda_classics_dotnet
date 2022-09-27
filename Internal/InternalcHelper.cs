@@ -20,7 +20,7 @@ internal static class InternalcHelper
     {
         var node = LitJson.JsonMapper.ToObject<lcSvgNode.lcSvgNode_jrev>(json);
 
-
+        return string.Empty;
     }
 
     internal static string pointsAddOffsetXY_Path(this string path, float x, float y)
